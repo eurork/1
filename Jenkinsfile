@@ -12,7 +12,7 @@ pipeline {
           sh 'sleep 1'
           sh 'mkdir archive'
           sh 'touch archive/plik2.py archive/plik3.rpm archive/plik4.rpm'
-          writeFile file: 'archive/plik.sh', text: 'kod w pliku sh. \n 9 \n 8 \n 7 \n 6 \n 5 \n 4\n 3 \n 2 \n 1 \n koniec kodu.'
+          writeFile file: 'archive/plik.sh', text: 'echo "kod w pliku sh." echo "koniec kodu."'
           sh 'sleep 1'
           sh 'echo "koniec budowania."'
           zip archive: false, dir: 'archive', zipFile: 'test.zip'

@@ -6,6 +6,7 @@ pipeline {
     stages{
       stage('build') {
         steps {
+          sh 'rm -rf archive'
           sh 'echo "rozpoczynam budowanie . . ."'
           sh 'sleep 1'
           sh 'mkdir archive'

@@ -1,10 +1,7 @@
 pipeline {
     agent any
-    environment {
-      VERSION = '1.0'
-    }
     options {
-        copyArtifactPermission("install-${VERSION}, deploy-${VERSION}");
+        copyArtifactPermission("install-*, deploy-*");
     }
     stages{
       stage('build') {

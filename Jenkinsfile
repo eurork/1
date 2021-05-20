@@ -15,10 +15,11 @@ pipeline {
           sh 'sleep 1'
           sh 'cd ..'
           sh 'echo "koniec budowania."'
+          archiveArtifacts artifacts: 'plik.sh', fingerprint: true
           script{
             zip archive: false, dir: 'archive', zipFile: 'test.zip'
+            archiveArtifacts artifacts: 'test.zip', fingerprint: true
           }
-          archiveArtifacts artifacts: 'test.zip', fingerprint: true
           sh 'echo "Artefakty zapisane."'
         }
       }

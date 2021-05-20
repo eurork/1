@@ -7,7 +7,7 @@ pipeline {
       stage('build') {
         steps {
           sh 'rm -rf archive'
-          sh 'rm plik.sh plik2.py plik3.rpm plik4.rpm test.zip'
+          sh 'rm -f plik.sh plik2.py plik3.rpm plik4.rpm test.zip'
           sh 'echo "rozpoczynam budowanie . . ."'
           sh 'sleep 1'
           sh 'mkdir archive'
